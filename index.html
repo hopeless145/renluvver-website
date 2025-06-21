@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maram / MiMi / Renluvver</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-image: url('red-aesthetic-bg.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #2c0000;
+    }
+
+    header {
+      background-color: rgba(220, 20, 60, 0.95);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      backdrop-filter: blur(5px);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(139, 0, 0, 0.95);
+      flex-wrap: wrap;
+      backdrop-filter: blur(5px);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      display: block;
+    }
+
+    nav a:hover {
+      background-color: crimson;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: auto;
+      border-bottom: 2px dashed #ccc;
+      background-image: url('red-aesthetic-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-color: rgba(0, 0, 0, 0.7);
+      background-blend-mode: overlay;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+      color: #ffffff;
+    }
+
+    .love-letter {
+      background-image: url("love-bg.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center top;
+      padding-top: 260px;
+      line-height: 1.6;
+      font-size: 1.1rem;
+      white-space: pre-line;
+      border-bottom: none;
+    }
+
+    iframe {
+      width: 100%;
+      height: 80px;
+      border: none;
+      margin: 1rem 0;
+      border-radius: 12px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #ffcccc;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: crimson;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .scroll-to-top:hover {
+      background-color: darkred;
+      transform: scale(1.1);
+    }
+
+    .scroll-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .intro-container {
+      text-align: center;
+      margin: 3rem auto;
+      max-width: 700px;
+      padding: 2rem;
+      color: #fff;
+      background-color: rgba(255, 192, 203, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(3px);
+      position: relative;
+    }
+
+    .shaky-text {
+      font-size: 2.5rem;
+      color: #ff69b4;
+      animation: shake 5s ease-in-out infinite;
+      position: relative;
+      transform-origin: center;
+    }
+
+    @keyframes shake {
+      0%   { transform: translate(0px, 0px) rotate(0deg); }
+      10%  { transform: translate(-2px, 1.5px) rotate(-1deg); }
+      20%  { transform: translate(2.5px, -2px) rotate(1.2deg); }
+      30%  { transform: translate(-1.5px, 2.5px) rotate(-0.8deg); }
+      40%  { transform: translate(2px, 1px) rotate(1.5deg); }
+      50%  { transform: translate(-2.5px, -1.5px) rotate(-1.2deg); }
+      60%  { transform: translate(1.5px, 2px) rotate(0.8deg); }
+      70%  { transform: translate(-2px, 1px) rotate(-1.5deg); }
+      80%  { transform: translate(2.5px, -1.8px) rotate(1deg); }
+      90%  { transform: translate(-1px, 1.2px) rotate(-0.5deg); }
+      100% { transform: translate(0px, 0px) rotate(0deg); }
+    }
+
+    .intro-paragraph {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .intro-container::before, .intro-container::after {
+      content: "\2728";
+      position: absolute;
+      font-size: 2rem;
+      animation: sparkle 2.5s infinite alternate ease-in-out;
+    }
+
+    .intro-container::before {
+      top: -10px;
+      left: -10px;
+    }
+
+    .intro-container::after {
+      bottom: -10px;
+      right: -10px;
+    }
+
+    @keyframes sparkle {
+      0% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.7; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Maram / MiMi / Renluvver</h1>
+    <p>made by hopeless (hope you enjoy :3)</p>
+  </header>
+
+  <nav>
+    <a href="#intro">Intro</a>
+    <a href="#music">Music</a>
+    <a href="#movies">Movies</a>
+    <a href="#food">Food</a>
+    <a href="#games">Games</a>
+    <a href="#books">Books</a>
+    <a href="#letter">Letter</a>
+  </nav>
+
+  <section id="intro">
+    <div class="intro-container">
+      <h1 class="shaky-text">HIHIHIHIHIH MARAMMMMM 💖💫</h1>
+      <p class="intro-paragraph">
+        welcome to your silly little website made by your silly little hopeless 🤭 <br>
+        i made this just for you — because you deserve something soft, sweet, and full of love 💌<br><br>
+        this is your little corner of the internet — made with way too much love, maybe a bit too much time, and all of my heart 🥺<br>
+        it's not just a website. it's a piece of you. your favs, your vibes, your softness and chaos.<br><br>
+        scroll around. explore. smile. cry a little (just a little tho pls 😭)<br>
+        and remember — this exists because i love you so, so much. more than conan gray loves sad songs. fr.
+      </p>
+    </div>
+  </section>
+
+  <section id="music">
+    <h2>Music</h2>
+
+    <h3 style="text-align: center; color: white; font-weight: bold;">💫 Maram's Top 5 Favorite Artists 💫</h3>
+
+
+    <p><strong>1. Conan Gray:</strong> Conan is an American singer-songwriter who first rose to fame on YouTube before
+      releasing his breakout hit Heather. Known for writing heart-wrenching songs about love, loneliness, and identity,
+      Conan's music blends bedroom pop with raw, emotional lyricism — something that clearly resonates with Maram.<br>
+      <span class="quote">Fun Fact: Before his music career took off, Conan used to make vlogs and write poetry — he's
+        been creative since he was a kid.</span>
+    </p>
+    <img src="attached_assets/image_1750492450898.png" alt="Conan Gray" style="max-width: 300px; border-radius: 10px; margin: 1rem 0;" />
+
+    <p><strong>2. Sombr:</strong> Sombr is a lesser-known but deeply emotional artist whose music explores
+      vulnerability, heartbreak, and longing. With a voice that sounds like it's carrying the weight of everything
+      unsaid, Sombr's songs strike a chord with people who overthink, overfeel, and fall too hard.<br>
+      <span class="quote">Fun Fact: Though not mainstream, Sombr's cult following comes from TikTok and late-night
+        playlists — people find their way to his songs when they need comfort.</span>
+    </p>
+    <img src="attached_assets/image_1750492519799.png" alt="Sombr" style="max-width: 300px; border-radius: 10px; margin: 1rem 0;" />
+
+    <p><strong>3. bbno$:</strong> Pronounced baby no money, bbno$ is a Canadian rapper and internet personality known
+      for his playful lyrics and infectious beats. His music is the complete opposite of sad boy pop — it's loud,
+      chaotic, and fun — proving Maram has RANGE.<br>
+      <span class="quote">Fun Fact: He originally studied kinesiology and planned to be a physiotherapist before turning
+        to music full-time!</span>
+    </p>
+    <img src="attached_assets/image_1750492544705.png" alt="bbno$" style="max-width: 300px; border-radius: 10px; margin: 1rem 0;" />
+
+  
+
+    <p><strong>4. Gracie Abrams:</strong> Gracie's soft voice and honest songwriting have made her a favorite among
+      indie pop fans. Her lyrics often feel like pages from a diary — introspective, tender, and painfully relatable.
+      She's part of the new wave of singer-songwriters who turn vulnerability into art.<br>
+      <span class="quote">Fun Fact: Gracie is the daughter of film director J.J. Abrams (yep — Star Wars and Star Trek)
+        but carved her own path in music.</span>
+    </p>
+
+    <img src="attached_assets/image_1750492621019.png" alt="Gracie Abrams" style="max-width: 300px; border-radius: 10px; margin: 1rem 0;" />
+    
+    
+
+    <p><strong>5. Olivia Rodrigo:</strong> Known for drivers license, good 4 u, and her GRAMMY-winning debut album SOUR,
+      Olivia is the voice of Gen Z heartbreak. Her blend of emotional ballads and pop-punk anthems make her a must on
+      any heartbreak playlist — which Maram obviously vibes with.<br>
+      <span class="quote">Fun Fact: Olivia was inspired by Taylor Swift and Lorde, and often writes her lyrics in one go
+        — she calls it "purging" her feelings into her songs.</span>
+    </p>
+    <img src="attached_assets/image_1750492663746.png" alt="Olivia Rodrigo" style="max-width: 300px; border-radius: 10px; margin: 1rem 0;" />
+    <hr style="margin: 2rem 0; border: 1px solid #ccc;">
+     <h3 style="text-align: center; color: white; margin-top: 2rem;">💖 Maram’s Top 5 Favorite Songs 💖</h3>
+
+
+    <p><strong>1. Fight or Flight – Conan Gray</strong><br>
+      <span class="quote">"Fight or flight, I'd rather lie, Than tell you I'm in love with you"</span>
+    </p>
+    <iframe src="https://open.spotify.com/embed/track/0yfDVYKVKYrHknz9gVOlQr?utm_source=generator"></iframe>
+
+    <p><strong>2. Undressed – Sombr</strong><br>
+      <span class="quote">" I don't wanna get undressed For a new person all over again I don't wanna kiss someone
+        else's neck And have to pretend it's yours instead"</span>
+    </p>
+    <iframe src="https://open.spotify.com/embed/track/4AajxCEwGEsmHmT4H1TwjY?utm_source=generator"></iframe>
+
+    <p><strong>3. Bourgeoisieses – Conan Gray</strong><br>
+      <span class="quote">idk 😭</span>
+    </p>
+    <iframe src="https://open.spotify.com/embed/track/056bKm6W5j9QodOftRznUV?utm_source=generator"></iframe>
+
+    <p><strong>4. The Exit – Conan Gray</strong><br>
+      <span class="quote">"Feels like we had matching wounds But mine's still black and bruised And yours is perfectly
+        fine now"</span>
+    </p>
+    <iframe src="https://open.spotify.com/embed/track/6PDWMQJ55ZYrGrSx3EZzl4?utm_source=generator"></iframe>
+
+    <p><strong>5. Movies – Conan Gray</strong><br>
+      <span class="quote">idk 😭</span>
+    </p>
+    <iframe src="https://open.spotify.com/embed/track/6FH6fmlh9DbvssuEQyQEVd?utm_source=generator"></iframe>
+  </section>
+
+  <section id="movies">
+   <h2 style="text-align: center; color: white; font-weight: bold;">🎬Maram's Favorite Movies 🎬</h2>
+
+    <img src="attached_assets/download (7)_1750484852784.png" alt="Harry Potter movie posters" />
+
+    <p><strong>Favorite Movie Series:</strong> The Harry Potter Series</p>
+    <p><strong>Favorite Movie:</strong> Harry Potter and the Prisoner of Azkaban</p>
+    <p><strong>Backstory:</strong> In Harry Potter and the Prisoner of Azkaban, Harry returns to Hogwarts for his third
+      year, but danger looms as Sirius Black — a notorious prisoner — has escaped from Azkaban. Everyone believes he's
+      out to kill Harry. As Harry unravels the mystery, he discovers shocking truths about his parents, betrayal, and
+      loyalty. With the help of Hermione and Ron, Harry confronts his past and begins to understand the true meaning of
+      family and friendship.</p>
+    <p><strong>Fun Fact:</strong> The character of Sirius Black was the first major role Gary Oldman took after a long
+      break — and he was cast because his kids were fans of the books!</p>
+  </section>
+
+  <section id="food">
+<h2 style="text-align: center; color: white; font-weight: bold;">🍽️Maram's Favorite Food 🍽️</h2>
+    <p><strong>1. Fattoush:</strong> Apparently Maram loves fattoush, well we learn something new everyday 🙂<br>
+      She said. And I Quote "The sourness in it😋" Weirdo</p>
+    <p>Fattoush is a fresh and tangy Middle Eastern salad that combines crispy pieces of toasted or fried pita bread
+      with a colorful mix of vegetables. It’s known for its bold flavors and refreshing taste, often served as a starter
+      or side dish.</p>
+    <p><strong>What It’s Made Of:</strong><br>
+      Toasted or fried pita bread (cut into pieces)<br>
+      Tomatoes<br>
+      Cucumbers<br>
+      Radishes<br>
+      Lettuce or mixed greens<br>
+      Parsley<br>
+      Mint<br>
+      Green onions<br>
+      Olive oil<br>
+      Lemon juice<br>
+      Sumac (a tangy, lemony spice)</p>
+    <p><strong>Fun Fact abt it:</strong><br>
+      The word Fattoush comes from the Arabic word "fatteh," which means "crumbs" — a nod to the use of leftover pita
+      bread in the dish :)</p>
+
+    <img src="attached_assets/download (2)_1750484852786.png" alt="Fattoush salad" />
+
+
+    <p><strong>2. Shawarma:</strong> WWWWWW MIMI YOU'RE SOOO GOATED WFOIAFLOAKLFSA MARRY ME ALREADY BRO
+      HEHEHEADFJKAPPOAJFPAPF</p>
+    <p><strong>Description:</strong><br>
+      Shawarma is a beloved Middle Eastern street food made of thinly sliced meat that's been marinated in flavorful
+      spices, stacked on a vertical spit, and slow-roasted to juicy perfection. It’s usually served wrapped in pita
+      bread with a variety of tasty toppings and sauces.</p>
+    <p><strong>What It’s Made Of:</strong><br>
+      Marinated meat (commonly chicken, beef, or lamb)<br>
+      Garlic<br>
+      Yogurt or vinegar (for marinating)<br>
+      Spices like cumin, paprika, turmeric, and cinnamon<br>
+      Pita bread or flatbread<br>
+      Toppings: tahini, garlic sauce, pickles, tomatoes, onions, lettuce, and sometimes fries inside the wrap!</p>
+    <p><strong>Fun Fact:</strong><br>
+      Shawarma is so popular in the Middle East that it's considered the local version of fast food and funnily enough,
+      it even made a surprise appearance in a Marvel post-credits scene (The Very First Avengers Movie 😭)</p>
+
+    <img src="attached_assets/download (9)_1750484852784.png" alt="Shawarma" />
+  </section>
+
+  <section id="games">
+    <h2 style="text-align: center; color: white; font-weight: bold;">🎮Maram's Favorite Games 🎮</h2>
+
+    <p><strong>Maram's Favorite Game is:</strong></p>
+
+    <img src="attached_assets/Made with insMind-download (8)_1750484852783.jpg" alt="Genshin Impact" />
+
+    <p>Genshin impact: (Apparently she only likes genshin impact)</p>
+    <p><strong>Fun Fact:</strong> Maram is a popular (in my eyes) Genshin Impact Content Creator</p>
+
+    <p><strong>Backstory:</strong><br>
+      In Genshin Impact, you play as the Traveler, a mysterious being from another world who arrives in the land of
+      Teyvat with their twin sibling. But during a sudden conflict with a powerful unknown force, the two are separated
+      and the Traveler is sealed away, waking up in a strange world alone. Now, with the help of a floating companion
+      named Paimon, you journey across Teyvat’s seven elemental nations in search of your lost sibling, uncovering
+      ancient secrets, gods known as Archons, and a deeper mystery that threatens the entire world.</p>
+
+    <p><strong>Description:</strong><br>
+      Genshin Impact is an open world action role-playing game where players explore the magical land of Teyvat, a world
+      filled with elemental powers, mythical creatures, and ancient secrets. You play as the Traveler, searching for
+      your lost sibling while meeting a diverse cast of characters — each with unique abilities tied to elements like
+      wind, fire, water, and more. The game combines exploration, combat, and story-rich quests in a stunning
+      anime-style world.</p>
+
+    <p><strong>What It Features:</strong></p>
+    <ul>
+      <li>A massive, beautiful open world</li>
+      <li>Elemental magic-based combat (Pyro, Hydro, Electro, etc.)</li>
+      <li>A growing roster of unique characters</li>
+      <li>Co-op multiplayer option</li>
+      <li>Constant updates with new regions, characters, and stories</li>
+    </ul>
+
+    <p><strong>Fun Fact:</strong><br>
+      Genshin Impact was developed by the Chinese studio HoYoverse and it made over $1 billion in revenue within just
+      six months of its release making it one of the most successful mobile games ever!</p>
+  </section>
+
+  <section id="books">
+ <h2 style="text-align: center; color: white; font-weight: bold;">📚Maram's Favorite Books 📚</h2>
+
+
+    <p><strong>1. No Longer Human – Osamu Dazai</strong></p>
+    <img src="attached_assets/download (6)_1750484852785.png" alt="No Longer Human book cover" />
+
+
+    <p><strong>Backstory:</strong><br>
+      No Longer Human follows Ōba Yōzō, a man who feels completely disconnected from society and struggles to present a
+      false, cheerful persona to mask his inner emptiness. Told through a series of notebooks, the novel explores his
+      descent into isolation, addiction, and despair a haunting reflection of alienation in modern life.</p>
+
+    <p><strong>Fun Fact:</strong><br>
+      This book is considered semi-autobiographical and is often seen as Osamu Dazai’s personal farewell he died by
+      suicide shortly after it was published in 1948.</p>
+
+    <p><strong>2. Crime and Punishment – Fyodor Dostoevsky</strong></p>
+    <img src="attached_assets/download (4)_1750484852786.png" alt="Crime and Punishment book cover" />
+
+    <p><strong>Backstory:</strong><br>
+      Set in 19th-century St. Petersburg, the novel follows Rodion Raskolnikov, a poor former student who believes he’s
+      above moral law. He murders a pawnbroker, thinking it will benefit society but the guilt slowly consumes him. The
+      story dives into psychological torment, redemption, and the weight of conscience.</p>
+
+    <p><strong>Fun Fact:</strong><br>
+      Dostoevsky wrote this while battling severe debt and gambling addiction some say he infused Raskolnikov with his
+      own inner conflicts.</p>
+
+    <p><strong>3. White Nights – Fyodor Dostoevsky</strong></p>
+    <img src="attached_assets/download (5)_1750484852785.png" alt="White Nights book cover" />
+
+    <p><strong>Backstory:</strong><br>
+      A lonely dreamer wanders the streets of St. Petersburg during the short summer nights and meets Nastenka, a young
+      woman waiting for her lost love. Over four nights, they connect deeply but reality interrupts their fleeting
+      romance. It’s a bittersweet tale of unspoken love, hope, and heartbreak.</p>
+
+    <p><strong>Fun Fact:</strong><br>
+      Despite being one of Dostoevsky’s shorter works, White Nights remains a favorite for its emotional simplicity and
+      it was later adapted into multiple films, including an Italian version by Luchino Visconti.</p>
+  </section>
+
+  <div style="height: 50px;"></div>
+
+  <section id="letter" class="love-letter"
+    style="border: 3px solid crimson; border-radius: 20px; padding: 2rem; position: relative; color: white;">
+    <div style="position: absolute; top: -20px; left: -20px; font-size: 2rem;">❤️</div>
+    <div style="position: absolute; top: -20px; right: -20px; font-size: 2rem;">❤️</div>
+    <div style="position: absolute; bottom: -20px; left: -20px; font-size: 2rem;">❤️</div>
+    <div style="position: absolute; bottom: -20px; right: -20px; font-size: 2rem;">❤️</div>
+  <h2 style="text-align: center; font-weight: bold; color: crimson;">💖Love Letter💖</h2>
+
+    <p>My dear Maram,</p>
+    <p>I hope you’re reading this during a calm moment. when things are quiet and you can just take a breath, relax, and
+      feel a little peace.
+      I’ve been thinking about you a lot… probably more than I should admit. But then again, you’ve always had that
+      effect on me. There’s just something about you. Idk maybe it’s your quiet strength, or the way your laugh feels
+      like it holds everything together. Whatever it is, it sticks with me, no matter how far or how long we’ve been
+      apart.</p>
+
+    <p>I keep thinking about us. Not just the smiles and those little looks we used to share, but the peace in our
+      silence, the honesty in just being near each other. That closeness didn’t need words. It felt real, it was real.
+      And I still hold onto those memories like a photo I never want to lose.</p>
+
+    <p>There are things I’ve been meaning to say. Things I didn’t know how to say when we were standing face to face.
+      But here, in writing, I’ll try.</p>
+
+    <p>You’ve always been the kind of person who makes me want to be better kinder, stronger, more open. Not because you
+      ever asked for that, but because you deserve it. You deserve someone who sees the best in you and wants to walk
+      beside you with patience and love. And I just hope that, even on the quietest days, you know how deeply you’re
+      loved.</p>
+
+    <p>I carry you with me every day. Not as something heavy, but like a guide. Thinking of you calms me, reminds me of
+      who I am when I’m with you, and gives me hope. Even if I don’t always say the right thing, I need you to know that
+      you’ve left a part of yourself with me that I’ll never let go of.</p>
+
+    <p>And I hope, no matter where life takes us, we both always know that I’m yours.</p>
+
+    <p>In all the quiet, simple, real ways that matter.</p>
+
+    <p>With all my love,<br>
+      Always yours,<br>
+      Mahmoud</p>
+   <div style="text-align: center; margin-top: 2rem;">
+  <img src="attached_assets/BuzzFeed_1750484852787.gif" alt="Love gif" style="max-width: 150px; border-radius: 10px;" />
+  <p style="margin-top: 1rem; font-size: 1.2rem; color: crimson;">I love you mimi &lt;3</p>
+</div>
+    </section>
+
+  <!-- Scroll to top button -->
+  <button id="scrollToTop" class="scroll-to-top" title="Scroll to top">
+    ↑
+  </button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get all navigation links
+      const navLinks = document.querySelectorAll('nav a');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          // Get the target section ID from the href
+          const targetId = this.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetId);
+
+          if (targetSection) {
+            // Smooth scroll to the target section
+            targetSection.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Scroll to top button functionality
+      const scrollToTopButton = document.getElementById('scrollToTop');
+
+      // Show/hide button based on scroll position
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 300) {
+          scrollToTopButton.classList.add('show');
+        } else {
+          scrollToTopButton.classList.remove('show');
+        }
+      });
+
+      // Scroll to top when button is clicked
+      scrollToTopButton.addEventListener('click', function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

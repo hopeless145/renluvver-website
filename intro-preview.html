@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maram Intro Preview</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            font-family: 'Georgia', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .intro-container {
+            text-align: center;
+            margin: 3rem auto;
+            max-width: 700px;
+            padding: 2rem;
+            color: #fff;
+            background-color: rgba(255, 192, 203, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(3px);
+            position: relative;
+        }
+
+        .shaky-text {
+            font-size: 2.5rem;
+            color: #ff69b4;
+            animation: shake 5s ease-in-out infinite;
+            position: relative;
+            transform-origin: center;
+        }
+
+        @keyframes shake {
+            0%   { transform: translate(0px, 0px) rotate(0deg); }
+            10%  { transform: translate(-2px, 1.5px) rotate(-1deg); }
+            20%  { transform: translate(2.5px, -2px) rotate(1.2deg); }
+            30%  { transform: translate(-1.5px, 2.5px) rotate(-0.8deg); }
+            40%  { transform: translate(2px, 1px) rotate(1.5deg); }
+            50%  { transform: translate(-2.5px, -1.5px) rotate(-1.2deg); }
+            60%  { transform: translate(1.5px, 2px) rotate(0.8deg); }
+            70%  { transform: translate(-2px, 1px) rotate(-1.5deg); }
+            80%  { transform: translate(2.5px, -1.8px) rotate(1deg); }
+            90%  { transform: translate(-1px, 1.2px) rotate(-0.5deg); }
+            100% { transform: translate(0px, 0px) rotate(0deg); }
+        }
+
+        .intro-paragraph {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .intro-container::before,
+        .intro-container::after {
+            content: "\2728";
+            position: absolute;
+            font-size: 2rem;
+            animation: sparkle 2.5s infinite alternate ease-in-out;
+        }
+
+        .intro-container::before {
+            top: -10px;
+            left: -10px;
+        }
+
+        .intro-container::after {
+            bottom: -10px;
+            right: -10px;
+        }
+
+        @keyframes sparkle {
+            0% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.7; }
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-container">
+        <h1 class="shaky-text">HIHIHIHIHIH MARAMMMMM 💖💫</h1>
+        <p class="intro-paragraph">
+            welcome to your silly little website made by your silly little hopeless 🤭 <br>
+            i made this just for you — because you deserve something soft, sweet, and full of love 💌<br><br>
+            this is your little corner of the internet — made with way too much love, maybe a bit too much time, and all of my heart 🥺<br>
+            it's not just a website. it's a piece of you. your favs, your vibes, your softness and chaos.<br><br>
+            scroll around. explore. smile. cry a little (just a little tho pls 😭)<br>
+            and remember — this exists because i love you so, so much. more than conan gray loves sad songs. fr.
+        </p>
+    </div>
+</body>
+</html>
